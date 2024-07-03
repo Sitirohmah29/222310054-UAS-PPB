@@ -13,8 +13,8 @@ const SignIn = ({ navigation }) => {
 
     const handleSignIn = () => {
         // Predefined credentials
-        const predefinedEmail = '222310048@student.ibik.ac.id';
-        const predefinedPassword = '222310048';
+        const predefinedEmail = '';
+        const predefinedPassword = '';
 
         if (email === predefinedEmail && password === predefinedPassword) {
             // Navigate to the next screen (e.g., Home screen)
@@ -33,7 +33,7 @@ const SignIn = ({ navigation }) => {
                 <Text style={styles.sloganSub}>Welcome Back!</Text>
             </View>
             <View style={styles.container3}>
-                <Image source={require("../../../../assets/img/icon.jpeg")} style={styles.img}/>
+                <Image source={require("../../../../assets/img/icon.png")} style={styles.img}/>
             </View>
             <View style={styles.inputContainer}>
                 <Text style={styles.label}>Email</Text>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#26282B',
+        backgroundColor: '#FAFAFA',
         padding: 30,
     },
     container2: {
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: "center",
         fontWeight: 'bold',
-        color: '#F8F4E1',
+        color: '#26282B',
     },
     container3: {
         marginBottom: 50,
@@ -115,13 +115,14 @@ const styles = StyleSheet.create({
     },
     container4: {
         alignItems: 'center',
-        marginBottom: 25,
+        marginBottom: 30,
     },
     sloganSub: {
         fontWeight: 'bold',
         textAlign: 'center',
         fontSize: 25,
         color: "#5F85DB",
+        marginBottom: 30,
     },
     inputContainer: {
         width: '100%',
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
     label: {
         width: 260,
         fontSize: 14,
-        color: "#F5F7F8",
+        color: "#26282B",
         marginBottom: 5,
     },
     input: {
@@ -142,7 +143,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         fontSize: 14,
         borderWidth: 1,
-        borderColor: '#ddd',
+        borderColor: '#26282B',
     },
     checkboxContainer: {
         flexDirection: 'row',
@@ -154,7 +155,7 @@ const styles = StyleSheet.create({
         height: 15,
         borderRadius: 0,
         borderWidth: 1,
-        borderColor: '#F5F7F8',
+        borderColor: '#26282B',
         marginLeft: 10,
         justifyContent: 'center',
         alignItems: 'center',
@@ -162,12 +163,12 @@ const styles = StyleSheet.create({
     checkedBox: {
         width: 15,
         height: 15,
-        backgroundColor: '#F5F7F8',
+        backgroundColor: '#26282B',
         borderRadius: 0,
     },
     termsText: {
         fontSize: 15,
-        color: "#F5F7F8",
+        color: "#26282B",
         textAlign: 'center',
         marginTop: 3,
         marginRight: 60,
@@ -192,6 +193,7 @@ const styles = StyleSheet.create({
         color: '#F5F7F8',
         fontSize: 16,
         fontWeight: 'bold',
+        
     },
     orText: {
         marginTop: 10,
@@ -203,7 +205,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         width: '100%',
         marginTop: 20,
-        marginRight: 30,
+        marginLeft: 10,
     },
     logo: {
         width: 40,
@@ -216,7 +218,7 @@ const styles = StyleSheet.create({
     },
     signInText: {
         fontSize: 16,
-        color: '#F5F7F8',
+        color: '#26282B',
     },
     signInLinkText: {
         fontWeight: 'bold',

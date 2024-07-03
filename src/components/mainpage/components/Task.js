@@ -17,21 +17,22 @@ const Task = ({ item, navigation }) => {
 const styles = StyleSheet.create({
   itemContainer: {
     flex: 1,
+  
   },
   btn:{
-    backgroundColor: '#F5F7F8',
+    backgroundColor: '#EEEDEB',
     padding: 10,
-    marginBottom: 10,
+    marginBottom: 20,
     borderRadius: 30,
-    width: 325,
+    width: 350,
     height: 50,
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: 'reguler',
     marginBottom: 8,
     color: '#26282B',
-    marginLeft: 10
+    marginLeft: 10,
   },
 });
 

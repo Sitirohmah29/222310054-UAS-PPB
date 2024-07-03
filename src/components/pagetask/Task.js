@@ -7,12 +7,12 @@ import ListItem from './components/task/List';
 
 
 
-const Task = ({navigation}) => {
+const Task = ({ navigation }) => {
   return (
     <View style={styles.container}>
     <TextInput style={styles.search}>
       <FontAwesome name="search" size={20} color="#543310" />
-      <Text style={{fontsize: 15, color: '#AF8F6F'}}> Search By Task</Text>
+      <Text style={{fontsize: 15, color: '#26282B'}}> Search By Task</Text>
     </TextInput>
     <View style={styles.list}>
     <List ListInCompleted={ListItem}/>
@@ -26,7 +26,7 @@ const Task = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8F4E1',
+    backgroundColor: '#FAFAFA',
     alignItems: 'center', // Center align items horizontally
     paddingTop: 50, // Ensure content starts a bit lower than the top
     paddingBottom: 20,
@@ -39,11 +39,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     color: '#543310',
+    backgroundColor: '#EEEDEB'
 },
   search: {
     width: 325,
     height: 40,
-    backgroundColor: '#E5DACE',
+    backgroundColor: '#F5F7F8',
     borderRadius: 30,
     paddingHorizontal: 20,
     fontSize: 14,

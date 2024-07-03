@@ -38,6 +38,7 @@ import Task from './src/components/pagetask/Task';
 import ExpCompleted from './src/components/pagetask/components/modules/ExpCompleted';
 import TaskDetailScreen from './src/components/pagetask/components/task/TaskDetailScreen';
 import MainTabs from './src/components/MainTabs';
+import Home from './src/components/mainpage/Home';
 
 
 const App = () => {
@@ -46,7 +47,7 @@ const App = () => {
     return (
         <NavigationContainer independent={true}>
             <Stack.Navigator initialRouteName="Splas">
-            <Stack.Screen name="Splash" component={MainTabs} options={{ headerShown: false }} />
+            <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
             <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
             <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false}} />
             <Stack.Screen name="Home" component={MainTabs} options={{ headerShown: false}} />

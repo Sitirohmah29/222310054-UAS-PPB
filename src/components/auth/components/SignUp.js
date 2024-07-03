@@ -11,7 +11,7 @@ const SignUp = ({ navigation }) => {
                 <Text style={styles.text}>Lupa.Inc</Text>
             </View>
             <View style={styles.container3}> 
-                <Image source={require("../../../../assets/img/book.jpeg")} style={styles.img}/>
+                <Image source={require("../../../../assets/img/book.png")} style={styles.img}/>
             </View> 
             <View style={styles.container4}>       
                 <Text style={styles.sloganSub}>Let's get started!</Text>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#26282B',
+        backgroundColor: '#FAFAFA',
         padding: 30,
     },
     container2: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: "center",
         fontWeight: 'bold',
-        color: '#F8F4E1',
+        color: '#1D242B',
     },
     container3: {
         marginBottom: 50,
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     container4: {
         alignItems: 'center',
         marginBottom: 30,
+        color:'#5F85DB'
     },
     sloganSub: {
         fontWeight: 'bold',
@@ -101,11 +102,13 @@ const styles = StyleSheet.create({
         width: '100%',
         marginBottom: 15,
         alignItems: 'center',
+        borderColor:'#737E88'
+        
     },
     label: {
         width: 260,
         fontSize: 14,
-        color: "#F5F7F8",
+        color: "#26282B",
         marginBottom: 5,
     },
     input: {
@@ -116,7 +119,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         fontSize: 14,
         borderWidth: 1,
-        borderColor: '#ddd',
+        borderColor: '#26282B',
     },
     checkboxContainer: {
         flexDirection: 'row',
@@ -128,7 +131,7 @@ const styles = StyleSheet.create({
         height: 20,
         borderRadius: 4,
         borderWidth: 1,
-        borderColor: '#F5F7F8',
+        borderColor: '#26282B',
         marginRight: 10,
         justifyContent: 'center',
         alignItems: 'center',
@@ -141,7 +144,7 @@ const styles = StyleSheet.create({
     },
     termsText: {
         fontSize: 15,
-        color: "#F5F7F8",
+        color: "#26282B",
         textAlign: 'center',
         marginTop: 10,
         flex: 1,
@@ -186,10 +189,11 @@ const styles = StyleSheet.create({
     signInContainer: {
         marginTop: 20,
         alignItems: 'center',
+        
     },
     signInText: {
         fontSize: 16,
-        color: '#F5F7F8',
+        borderColor:'#26282B'
     },
     signInLinkText: {
         fontWeight: 'bold',

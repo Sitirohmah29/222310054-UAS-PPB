@@ -12,7 +12,7 @@ const SplashScreen = ({ navigation }) => {
                 <Text style={styles.text}>Lupa.Inc</Text>
             </View>
             <View style={styles.container3}> 
-                <Image source={require("../../../assets/img/book.jpeg")} style={styles.img}/>
+                <Image source={require("../../../assets/img/book.png")} style={styles.img}/>
             </View> 
             <View style={styles.container4}>       
                 <Text style={styles.slogan}>Productivity</Text>
@@ -40,17 +40,19 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#26282B',
+        backgroundColor: '#F5F7F8',
         padding: 20,
+        
     },
     container2: {
         marginBottom: 50,
+        
     },
     text: {
         fontSize: 25,
         textAlign: "center",
         fontWeight: 'bold',
-        color: '#F8F4E1',
+        color: '#1D242B',
     },
     container3: {
         marginBottom: 50,
@@ -67,13 +69,13 @@ const styles = StyleSheet.create({
     slogan: {
         fontWeight: 'bold',
         textAlign: 'center',
-        fontSize: 30,
-        color: "#90B8F8",
+        fontSize: 35,
+        color: "#5F85DB",
     },
     sloganSub: {
         fontWeight: 'bold',
         textAlign: 'center',
-        fontSize: 30,
+        fontSize: 25,
         color: "#90B8F8",
     },
     container5: {

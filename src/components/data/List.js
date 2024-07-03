@@ -4,23 +4,29 @@ const DataInCompleted = [
         list :'Buat usecase',
         list_1 : 'Presentasi pertemuan 1',
         categories : 'Tugas',
-        due_time : '9 Juni, 2024',
+        due_time : '3 Juli, 2024',
     },
 
     {   id: 2,
         title :'Lari pagi',
         list :'Minggu pertama di gbk',
-        list_1 : 'Minggu pertama di sempur',
         categories : 'Olahraga',
-        due_time : '12 Juni, 2024',
+        due_time : '4 Juli, 2024',
     },
 
     {   id: 3,
         title :'lunch sama tante yang ke 3',
         list :'lunch di phoenix',
         categories : 'Pengingat',
-        due_time : '12 Juni, 2024',
-    },  
+        due_time : '5 Juli, 2024',
+    },
+    
+    {   id: 4,
+        title :'zumba',
+        list :'Zumba sekalian nemenin tante yang ke 2',
+        categories : 'Olahraga',
+        due_time : '4 Juli, 2024',
+    },
 ];
 
 const DataCompleted = [
@@ -44,7 +50,7 @@ const DataCompleted = [
         title :'Dinner sama ani ani',
         list :'Dinner di Zoo',
         categories : 'Pengingat',
-        due_time : '1Juni, 2024',
+        due_time : '1 juli, 2024',
     },  
 ];
 
