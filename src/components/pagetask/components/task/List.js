@@ -1,22 +1,44 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Alert, Vibration } from 'react-native';
 import CheckBox from 'react-native-check-box';
 import moment from 'moment';
+import { Audio } from 'expo-av';
 
 const ListItem = ({ item }) => {
   const [isCheckedList1, setIsCheckedList1] = useState(false);
   const [isCheckedList2, setIsCheckedList2] = useState(false);
+
+  const [sound, setSound] = useState();
+
+  async function playNotif() {
+    const {sound} = await Audio.Sound.createAsync(
+      require('../../../../../assets/Bruh.m4a')
+    );
+
+    setSound(sound)
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          console.log("Unloading Sound");
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
 
   // Fungsi untuk menangani toggle checkbox
   const handleCheckboxToggle = (listItem) => {
     if (listItem === item.list) {
       setIsCheckedList1(!isCheckedList1);
       Alert.alert("Notification", `You have ${isCheckedList1 ? "cancel" : "completed"} ${item.list}`);
-      Vibration.vibrate(2000);
+      Vibration.vibrate(500);
+      playNotif();
     } else if (listItem === item.list_1) {
       setIsCheckedList2(!isCheckedList2);
       Alert.alert("Notification", `You have ${setIsCheckedList2 ? "cancel" : "completed"} ${item.list_1}`);
-      Vibration.vibrate(2000);
+      Vibration.vibrate(500);
     }
   };
 
