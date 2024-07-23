@@ -3,7 +3,7 @@ import { View } from "react-native";
 import moment from "moment";
 import { CalendarWeeks } from "./Calender";
 
-export default function Index() {
+export default function Calender() {
   const [chooseDate, setChooseDate] = useState(moment().toDate());
 
   return (

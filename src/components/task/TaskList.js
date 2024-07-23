@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { StyleSheet, View, FlatList, TouchableOpacity, Text } from 'react-native';
 import CheckBox from 'react-native-check-box';
 
-const TaskList = ({ data }) => {
+const TaskList = ({ navigation, data }) => {
   const [isCheckedList1, setIsCheckedList1] = useState(false);
   const [isCheckedList2, setIsCheckedList2] = useState(false);
 
   const handleCheckboxToggle = (listItem) => {
-    if (listItem === item.list) {
+    if (listItem === isCheckedList1) {
       setIsCheckedList1(!isCheckedList1);
-    } else if (listItem === item.list_1) {
+    } else if (listItem === isCheckedList2) {
       setIsCheckedList2(!isCheckedList2);
     }
   };
@@ -17,7 +17,9 @@ const TaskList = ({ data }) => {
   const renderItem = ({ item }) => (
     <View style={styles.card}>
       <View style={styles.header}>
-        <Text style={styles.title}>{item.title}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('EditTask', { item })}>
+          <Text style={styles.title}>{item.title}</Text>
+        </TouchableOpacity>
         <Text style={styles.dropdownText}>{item.categories}</Text>
       </View>
 
@@ -52,8 +54,6 @@ const TaskList = ({ data }) => {
       data={data}
       renderItem={renderItem}
       keyExtractor={(item) => item.id.toString()}
-      horizontal={true}
-      showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.flatListContainer}
     />
   );
@@ -64,14 +64,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 20,
-    paddingBottom: 20,
   },
   card: {
     backgroundColor: '#90B8F8',
     borderRadius: 10,
     padding: 15,
-    width: 300, // Adjust width as needed
-    marginHorizontal: 10, // Add horizontal margin between items
+    width: 350,
+    marginBottom: 20
   },
   header: {
     flexDirection: 'row',

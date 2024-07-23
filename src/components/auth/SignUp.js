@@ -11,7 +11,7 @@ const SignUp = ({ navigation }) => {
                 <Text style={styles.text}>Lupa.Inc</Text>
             </View>
             <View style={styles.container3}> 
-                <Image source={require("../../../../assets/img/book.png")} style={styles.img}/>
+                <Image source={require("../../../assets/img/book.png")} style={styles.img}/>
             </View> 
             <View style={styles.container4}>       
                 <Text style={styles.sloganSub}>Let's get started!</Text>
@@ -48,9 +48,9 @@ const SignUp = ({ navigation }) => {
                 <Text style={styles.orText}>or sign up with</Text>
             </View>
             <View style={styles.container5}> 
-                <Image source={require("../../../../assets/img/fb.jpeg")} style={styles.logo}/>
-                <Image source={require("../../../../assets/img/google.jpeg")} style={styles.logo}/>
-                <Image source={require("../../../../assets/img/apple.jpeg")} style={styles.logo}/>
+                <Image source={require("../../../assets/img/fb.jpeg")} style={styles.logo}/>
+                <Image source={require("../../../assets/img/google.jpeg")} style={styles.logo}/>
+                <Image source={require("../../../assets/img/apple.jpeg")} style={styles.logo}/>
             </View> 
             <View style={styles.signInContainer}>
                 <Text style={styles.signInText}>

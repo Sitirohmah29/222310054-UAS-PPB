@@ -10,7 +10,7 @@ import { Ionicons } from "@expo/vector-icons";
 import moment from "moment";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { ColorPallete } from "../data/color";
-import { DataInCompleted } from "../data/List";
+import { DataList } from "../data/List";
 
 export function CalendarWeeks({ chooseDate, setChooseDate }) {
   const [selectedDate, setSelectedDate] = useState(chooseDate);
@@ -61,7 +61,7 @@ export function CalendarWeeks({ chooseDate, setChooseDate }) {
 
   const filterDataByDate = (date) => {
     const formattedDate = moment(date).format("D MMMM, YYYY");
-    const filtered = DataInCompleted.filter((item) =>
+    const filtered = DataList.filter((item) =>
       moment(item.due_time, "D MMMM, YYYY").isSame(date, "day")
     );
     setFilteredData(filtered);
@@ -112,7 +112,7 @@ export function CalendarWeeks({ chooseDate, setChooseDate }) {
             <Text style={styles.dataTitle}>{item.title}</Text>
             <Text style={styles.dataList}>{item.list}</Text>
             {item.list_1 && <Text style={styles.dataList}>{item.list_1}</Text>}
-            <Text style={styles.dataCategory}>{item.categories}</Text>
+            {/* <Text style={styles.dataCategory}>{item.categories}</Text> */}
           </View>
         ))}
       </ScrollView>

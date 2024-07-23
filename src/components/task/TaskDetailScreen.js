@@ -1,14 +1,12 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { DataInCompleted } from '../../../data/List';
+import { StyleSheet, View } from 'react-native'; 
 import TaskList from './TaskList';
+import { DataList } from '../data/List';
 
-
-
-const TaskDetailScreen = () => {
+const TaskDetailScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <TaskList data={DataInCompleted} />
+      <TaskList data={DataList} navigation={navigation} />
     </View>
   );
 };
@@ -19,8 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FAFAFA',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 300,
-    padding: 10
+    padding: 10,
   },
 });
 

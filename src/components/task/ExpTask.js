@@ -1,20 +1,17 @@
-import React from 'react';
+ import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
-import { DataInCompleted } from '../../../data/List';
-import ListInCompleted from '../task/ListInCompleted';
+import { DataList } from '../data/List';
+import TaskDetailScreen from './TaskDetailScreen';
 
-
-
-
-const ExpInCompleted = () => {
+const ExpTask = (navigation) => {
     const renderItem = ({ item }) => (
-        <ListInCompleted item={item} />
+        <TaskDetailScreen item={item} navigation={navigation} />
     );
 
     return (
         <View style={styles.container}>
             <FlatList
-                data={DataInCompleted}
+                data={DataList}
                 renderItem={renderItem}
                 keyExtractor={item => item.id.toString()}
             />
@@ -30,4 +27,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ExpInCompleted;
+export default ExpTask;

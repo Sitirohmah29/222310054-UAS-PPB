@@ -12,13 +12,11 @@ const SignIn = ({ navigation }) => {
     };
 
     const handleSignIn = () => {
-        // Predefined credentials
         const predefinedEmail = '';
         const predefinedPassword = '';
 
         if (email === predefinedEmail && password === predefinedPassword) {
-            // Navigate to the next screen (e.g., Home screen)
-            navigation.navigate('Home'); // Adjust 'Home' to your target screen's name
+            navigation.navigate('Home'); 
         } else {
             Alert.alert('Error', 'Invalid email or password');
         }
@@ -33,7 +31,7 @@ const SignIn = ({ navigation }) => {
                 <Text style={styles.sloganSub}>Welcome Back!</Text>
             </View>
             <View style={styles.container3}>
-                <Image source={require("../../../../assets/img/icon.png")} style={styles.img}/>
+                <Image source={require("../../../assets/img/icon.png")} style={styles.img}/>
             </View>
             <View style={styles.inputContainer}>
                 <Text style={styles.label}>Email</Text>
@@ -74,9 +72,9 @@ const SignIn = ({ navigation }) => {
                 <Text style={styles.orText}>or sign in with</Text>
             </View>
             <View style={styles.container5}>
-                <Image source={require("../../../../assets/img/fb.jpeg")} style={styles.logo}/>
-                <Image source={require("../../../../assets/img/google.jpeg")} style={styles.logo}/>
-                <Image source={require("../../../../assets/img/apple.jpeg")} style={styles.logo}/>
+                <Image source={require("../../../assets/img/fb.jpeg")} style={styles.logo}/>
+                <Image source={require("../../../assets/img/google.jpeg")} style={styles.logo}/>
+                <Image source={require("../../../assets/img/apple.jpeg")} style={styles.logo}/>
             </View>
             <View style={styles.signInContainer}>
                 <Text style={styles.signInText}>
